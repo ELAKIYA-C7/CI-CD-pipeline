@@ -21,6 +21,8 @@ RUN apt-get update && apt-get install -y openjfx
 
 COPY --from=builder /app/target/*.jar app.jar
 
+ENTRYPOINT ["java","-jar","app.jar"]
+
 RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app
 USER appuser
 
