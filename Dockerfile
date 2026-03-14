@@ -1,39 +1,29 @@
-# Multi-stage Docker build for JavaFX application
-# Stage 1: Build with Maven
+# Stage 1: Build
 FROM maven:3.9.5-eclipse-temurin-17-focal AS builder
 
 WORKDIR /app
 
-# Copy pom.xml
 COPY pom.xml .
-
-# Download dependencies (cached layer)
 RUN mvn dependency:go-offline
 
-# Copy source code
 COPY src ./src
 
-# Build the application
 RUN mvn clean package -DskipTests
 
-# Stage 2: Runtime image
+
+# Stage 2: Runtime
 FROM eclipse-temurin:17-jre-focal
 
 WORKDIR /app
 
-# Copy built JAR from builder stage
-COPY --from=builder /app/target/*-jar-with-dependencies.jar app.jar
+# Install JavaFX
+RUN apt-get update && apt-get install -y openjfx
 
-# Create non-root user for security
+COPY --from=builder /app/target/*.jar app.jar
+
 RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app
 USER appuser
 
-# Expose port (if needed for network operations)
 EXPOSE 8080
 
-# Health check (optional)
-HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
-    CMD java -version || exit 1
-
-# Run the application
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java","--module-path","/usr/share/openjfx/lib","--add-modules","javafx.controls,javafx.fxml","-jar","app.jar"]
