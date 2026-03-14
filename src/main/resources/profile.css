@@ -1,0 +1,147 @@
+/* Profile Page Styles */
+
+.profile-header {
+    -fx-background-color: linear-gradient(to bottom right, #667eea 0%, #764ba2 100%);
+    -fx-padding: 30 40 30 40;
+    -fx-alignment: center-left;
+}
+
+.profile-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.profile-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: rgba(255,255,255,0.8);
+}
+
+.card {
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10, 0, 0, 2);
+    -fx-background-color: -fx-control-inner-background;
+}
+
+.avatar-circle {
+    -fx-fill: #e0e0e0;
+    -fx-stroke: #667eea;
+    -fx-stroke-width: 3;
+}
+
+.avatar-initials {
+    -fx-font-size: 48px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #667eea;
+}
+
+.user-handle {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-opacity: 0.7;
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.role-badge {
+    -fx-background-color: #e8f6f3;
+    -fx-text-fill: #27ae60;
+    -fx-padding: 5 15;
+    -fx-background-radius: 15;
+    -fx-font-weight: bold;
+}
+
+.status-badge {
+    -fx-background-color: #eaf2f8;
+    -fx-text-fill: #3498db;
+    -fx-padding: 5 15;
+    -fx-background-radius: 15;
+    -fx-font-weight: bold;
+}
+
+.stat-label {
+    -fx-opacity: 0.7;
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.stat-value {
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.profile-input {
+    -fx-border-color: #dfe6e9;
+    -fx-border-radius: 8;
+    -fx-border-width: 2;
+    -fx-padding: 12;
+    -fx-text-fill: -fx-text-inner-color;
+    -fx-background-color: -fx-control-inner-background;
+}
+
+.profile-input:read-only {
+    -fx-opacity: 0.7;
+}
+
+.field-label {
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-text-base-color;
+}
+
+.save-button {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+}
+
+.back-button {
+    -fx-background-color: #95a5a6;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-padding: 10 20;
+    -fx-background-radius: 5;
+}
+
+.upload-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #667eea;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+    -fx-underline: true;
+    -fx-padding: 5 0 5 0;
+}
+.upload-button:hover {
+    -fx-text-fill: #764ba2;
+}
+
+.remove-photo-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e74c3c;
+    -fx-font-size: 11px;
+    -fx-cursor: hand;
+    -fx-padding: 0 0 5 0;
+}
+.remove-photo-button:hover {
+    -fx-underline: true;
+}
+
+.avatar-plus-badge {
+    -fx-background-color: #667eea;
+    -fx-text-fill: white;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-height: 30px;
+    -fx-background-radius: 50%;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 5, 0, 0, 1);
+}

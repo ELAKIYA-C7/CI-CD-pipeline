@@ -1,0 +1,25 @@
+.root {
+    -fx-base: #1a1a1a;
+    -fx-background: #1a1a1a;
+    -fx-control-inner-background: #333333;
+    -fx-text-base-color: white;
+}
+
+.spinner .text-field {
+    -fx-text-fill: white;
+    -fx-background-color: #333333;
+}
+
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button {
+    -fx-background-color: #333333;
+}
+
+.spinner .increment-arrow-button .arrow,
+.spinner .decrement-arrow-button .arrow {
+    -fx-background-color: white;
+}
+
+.text-input {
+    -fx-text-fill: white;
+}

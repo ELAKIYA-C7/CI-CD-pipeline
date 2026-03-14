@@ -1,0 +1,151 @@
+/* 
+ * Modern Premium Theme 
+ * Primary Colors: Purple/Blue Gradient
+ * Action Colors: Green (Success/Accept), Red (Danger/Reject)
+ */
+.root {
+    /* Color Variables */
+    -fx-primary-gradient: linear-gradient(to bottom right, #667eea 0%, #764ba2 100%);
+    -fx-bg-color: #f4f7f6;
+    -fx-card-bg: white;
+    -fx-text-primary: #2c3e50;
+    -fx-text-secondary: #7f8c8d;
+    
+    /* Button Colors */
+    -fx-btn-success-bg: #2ecc71;
+    -fx-btn-success-hover: #27ae60;
+    -fx-btn-danger-bg: #e74c3c;
+    -fx-btn-danger-hover: #c0392b;
+    -fx-btn-primary-bg: #3498db;
+    -fx-btn-primary-hover: #2980b9;
+
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+}
+
+/* --- Layout Containers --- */
+.login-root {
+    -fx-background-color: -fx-primary-gradient;
+}
+
+.dashboard-root {
+    -fx-background-color: -fx-bg-color;
+}
+
+/* --- Cards --- */
+.card, .login-card, .stat-card {
+    -fx-background-color: -fx-card-bg;
+    -fx-background-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 15, 0.1, 0, 5);
+    -fx-padding: 30;
+}
+
+.login-card {
+    -fx-padding: 0; /* Header handles padding */
+}
+
+/* --- Headers --- */
+.header-panel {
+    -fx-background-color: white;
+    -fx-padding: 20 40;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 10, 0, 0, 2);
+}
+
+.login-header {
+    -fx-background-color: white;
+    -fx-background-radius: 15 15 0 0;
+    -fx-padding: 40 40 20 40;
+    -fx-alignment: center;
+}
+
+.login-footer {
+    -fx-padding: 20 40 40 40;
+    -fx-alignment: center;
+}
+
+/* --- Typography --- */
+.h1 { -fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: -fx-text-primary; }
+.h2 { -fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: -fx-text-primary; }
+.subtitle { -fx-font-size: 14px; -fx-text-fill: -fx-text-secondary; }
+
+/* --- Forms --- */
+.text-field, .password-field {
+    -fx-background-color: #f8f9fa;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 12;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #667eea;
+    -fx-background-color: white;
+    -fx-effect: dropshadow(gaussian, rgba(102, 126, 234, 0.2), 5, 0, 0, 0);
+}
+
+/* --- Buttons --- */
+.button {
+    -fx-cursor: hand;
+    -fx-background-radius: 8;
+    -fx-padding: 10 20;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 3, 0, 0, 2);
+    -fx-transition: all 0.3s;
+}
+
+.button:hover {
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 5, 0, 0, 3);
+}
+
+/* Success Button (Green for Accept/Login) */
+.btn-success {
+    -fx-background-color: -fx-btn-success-bg;
+}
+.btn-success:hover {
+    -fx-background-color: -fx-btn-success-hover;
+}
+
+/* Danger Button (Red for Reject/Delete) */
+.btn-danger {
+    -fx-background-color: -fx-btn-danger-bg;
+}
+.btn-danger:hover {
+    -fx-background-color: -fx-btn-danger-hover;
+}
+
+/* Primary Button (Blue for standard actions) */
+.btn-primary {
+    -fx-background-color: -fx-btn-primary-bg;
+}
+.btn-primary:hover {
+    -fx-background-color: -fx-btn-primary-hover;
+}
+
+/* Icon Buttons (Refresh, etc) */
+.btn-icon {
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-text-secondary;
+    -fx-padding: 8;
+    -fx-border-color: #e0e0e0;
+    -fx-border-radius: 50;
+    -fx-effect: none;
+}
+.btn-icon:hover {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: -fx-text-primary;
+}
+
+/* --- Stat Cards --- */
+.stat-card-title {
+    -fx-font-size: 14px;
+    -fx-text-fill: -fx-text-secondary;
+    -fx-font-weight: bold;
+}
+.stat-card-value {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: -fx-text-primary;
+}

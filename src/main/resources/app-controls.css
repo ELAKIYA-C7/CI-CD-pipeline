@@ -1,0 +1,36 @@
+/* Application base control styles */
+.root {
+  -fx-font-family: 'Segoe UI', Arial;
+  -fx-font-size: 12px;
+}
+
+.button {
+  -fx-background-color: #27ae60;
+  -fx-text-fill: white;
+  -fx-border-color: transparent;
+  -fx-background-radius: 6;
+  -fx-padding: 8 16 8 16;
+}
+
+.button.secondary {
+  -fx-background-color: #3498db;
+}
+
+.button.danger {
+  -fx-background-color: #e74c3c;
+}
+
+.button:focused {
+  -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.14), 6, 0.5, 0, 2);
+}
+
+.table-view {
+  -fx-control-inner-background: derive(-fx-base, 20%);
+}
+
+/* Card style for content panels */
+.card {
+  -fx-background-color: white;
+  -fx-background-radius: 10;
+  -fx-padding: 16;
+}

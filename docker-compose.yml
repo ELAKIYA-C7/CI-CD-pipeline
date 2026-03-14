@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  javafx-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: javafx-ci-cd-app
+    environment:
+      - JAVA_OPTS=-Xmx512m -Xms256m
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    networks:
+      - javafx-network
+
+networks:
+  javafx-network:
+    driver: bridge
